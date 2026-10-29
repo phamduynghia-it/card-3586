@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="">
+    
+    <link rel="apple-touch-icon" href="./assets/images/icons/couple.png">
+    <link rel="apple-touch-icon" sizes="180x180"
+        href="./assets/images/icons/couple.png">
+    <link rel="apple-touch-icon" sizes="152x152"
+        href="./assets/images/icons/couple.png">
+    <link rel="apple-touch-icon" sizes="120x120"
+        href="./assets/images/icons/couple.png">
+    <link rel="icon" type="image/png" href="./assets/images/icons/couple.png">
+    <meta name="theme-color" content="#1b0a1c">
+
+    <!-- SEO Google Search -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+    <meta name="robots" content="">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="">
+    <meta property="og:site_name" content="">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="">
+    <meta name="twitter:title" content="">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image" content="">
+
+    <title>Happy birthday</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;700&family=Dancing+Script:wght@500;600;700&family=Pacifico&family=Playfair+Display:wght@700;900&display=swap">
+    <script src="./anti-devtools.js"></script>
+</head>
+
+<body>
+    <link rel="stylesheet" href="./dist/styles/index.css">
+    <link rel="stylesheet" href="./dist/styles/gift2010.css">
+
+    <!-- ========== PASSCODE SCREEN ========== -->
+    <div id="passcodeScreen">
+        <!-- Trời đêm: cực quang hồng + sao lấp lánh + tim bay (CSS thuần, nhẹ) -->
+        <div class="pc-sky" aria-hidden="true">
+            <span class="pc-aurora a1"></span>
+            <span class="pc-aurora a2"></span>
+            <span class="pc-stars"></span>
+        </div>
+        <div class="pc-float-hearts" aria-hidden="true">
+            <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+            <span>♥</span><span>♥</span><span>♥</span><span>♥</span><span>♥</span>
+        </div>
+
+        <div class="passcode-bears" id="passcodeBears">
+            <img src="./assets/images/characters/bearwait.png" alt=""
+                class="passcode-bear left pos-0" id="bearLeft">
+            <img src="./assets/images/characters/bearflower.png" alt=""
+                class="passcode-bear right pos-0" id="bearRight">
+            <!-- Ổ khoá trái tim giữa hai bạn gấu: mở ra khi nhập đúng -->
+            <div class="pc-lock" id="passcodeLock" data-step="0" aria-hidden="true">
+                <svg viewBox="0 0 80 92">
+                    <defs>
+                        <linearGradient id="pcLockGold" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0" stop-color="#fff5d6" />
+                            <stop offset=".45" stop-color="#ffcf73" />
+                            <stop offset="1" stop-color="#c47d27" />
+                        </linearGradient>
+                        <radialGradient id="pcLockHeart" cx=".32" cy=".28" r=".9">
+                            <stop offset="0" stop-color="#ffc2da" />
+                            <stop offset=".42" stop-color="#ff5c98" />
+                            <stop offset="1" stop-color="#b8104f" />
+                        </radialGradient>
+                        <linearGradient id="pcLockGloss" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0" stop-color="#fff" stop-opacity=".85" />
+                            <stop offset="1" stop-color="#fff" stop-opacity="0" />
+                        </linearGradient>
+                    </defs>
+                    <!-- Quai khoá kim loại: bật lên và xoay ra khi mở -->
+                    <g class="pc-lock-shackle">
+                        <path d="M26 48V28a14 14 0 0 1 28 0v20" fill="none" stroke="url(#pcLockGold)" stroke-width="7.5" stroke-linecap="round" />
+                        <path d="M24.4 38V28a15.6 15.6 0 0 1 5.4-11.8" fill="none" stroke="#fffbe8" stroke-opacity=".75" stroke-width="1.6" stroke-linecap="round" />
+                    </g>
+                    <!-- Thân khoá hình trái tim: gradient + viền sáng + vệt bóng -->
+                    <g class="pc-lock-heart" transform="translate(8 22)">
+                        <path class="pc-lock-body" fill="url(#pcLockHeart)" d="M32 66C32 66 4 50 4 32 4 22 11 16 19 16c6 0 10.5 3.5 13 8 2.5-4.5 7-8 13-8 8 0 15 6 15 16 0 18-28 34-28 34z" />
+                        <path fill="none" stroke="#ffd9e8" stroke-opacity=".55" stroke-width="1.4" d="M32 66C32 66 4 50 4 32 4 22 11 16 19 16c6 0 10.5 3.5 13 8 2.5-4.5 7-8 13-8 8 0 15 6 15 16 0 18-28 34-28 34z" />
+                        <path fill="url(#pcLockGloss)" d="M10 30c0-7 5-10.5 10-10.5 3.5 0 6.5 2 8 4.5-7 0-13 3-16.5 8.5-.7 1.1-1.5-.5-1.5-2.5z" />
+                        <g class="pc-lock-key">
+                            <circle cx="32" cy="40" r="8.6" fill="url(#pcLockGold)" />
+                            <circle cx="32" cy="40" r="6.8" fill="#8a0d42" />
+                            <circle cx="32" cy="38.2" r="2.5" fill="#2e0314" />
+                            <path d="M30.6 39.6h2.8l1 5.2h-4.8z" fill="#2e0314" />
+                        </g>
+                    </g>
+                    <!-- Lấp lánh -->
+                    <path class="pc-lock-spark s1" d="M0-5 1.2-1.2 5 0 1.2 1.2 0 5-1.2 1.2-5 0-1.2-1.2z" transform="translate(70 44)" />
+                    <path class="pc-lock-spark s2" d="M0-5 1.2-1.2 5 0 1.2 1.2 0 5-1.2 1.2-5 0-1.2-1.2z" transform="translate(10 76) scale(.7)" />
+                </svg>
+            </div>
+            <img src="./assets/images/icons/couple.png" alt=""
+                class="passcode-couple-img" id="coupleImg">
+        </div>
+        <div class="hearts-passcode">
+            <span class="heart-fly">💕</span><span class="heart-fly">❤️</span>
+            <span class="heart-fly">💗</span><span class="heart-fly">💖</span>
+            <span class="heart-fly">💕</span><span class="heart-fly">❤️</span>
+            <span class="heart-fly">💗</span><span class="heart-fly">💖</span>
+            <span class="heart-fly">💕</span><span class="heart-fly">❤️</span>
+        </div>
+        <div class="passcode-title">Nhập mật khẩu</div>
+        <div class="passcode-subtitle">Mở món quà đặc biệt</div>
+        <div class="passcode-dots" id="passcodeDots">
+            <div class="passcode-dot" data-i="0"><svg viewBox="0 0 24 24"><path d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z" /></svg></div>
+            <div class="passcode-dot" data-i="1"><svg viewBox="0 0 24 24"><path d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z" /></svg></div>
+            <div class="passcode-dot" data-i="2"><svg viewBox="0 0 24 24"><path d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z" /></svg></div>
+            <div class="passcode-dot" data-i="3"><svg viewBox="0 0 24 24"><path d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z" /></svg></div>
+        </div>
+        <div class="passcode-keypad">
+            <button type="button" class="passcode-btn" data-num="1">1</button>
+            <button type="button" class="passcode-btn" data-num="2">2</button>
+            <button type="button" class="passcode-btn" data-num="3">3</button>
+            <button type="button" class="passcode-btn" data-num="4">4</button>
+            <button type="button" class="passcode-btn" data-num="5">5</button>
+            <button type="button" class="passcode-btn" data-num="6">6</button>
+            <button type="button" class="passcode-btn" data-num="7">7</button>
+            <button type="button" class="passcode-btn" data-num="8">8</button>
+            <button type="button" class="passcode-btn" data-num="9">9</button>
+            <span class="passcode-btn empty" aria-hidden="true">♥</span>
+            <button type="button" class="passcode-btn" data-num="0">0</button>
+            <button type="button" class="passcode-btn action" id="passcodeBack" aria-label="Xoá số vừa nhập">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M21 5H9.4a2 2 0 0 0-1.5.7L2.6 12l5.3 6.3a2 2 0 0 0 1.5.7H21a1 1 0 0 0 1-1V6a1 1 0 0 0-1-1zm-3.3 9.3-1.4 1.4-2.3-2.3-2.3 2.3-1.4-1.4 2.3-2.3-2.3-2.3 1.4-1.4 2.3 2.3 2.3-2.3 1.4 1.4-2.3 2.3z" /></svg>
+            </button>
+        </div>
+        <button type="button" class="passcode-cancel" id="passcodeCancel">Xoá hết</button>
+    </div>
+
+    <div id="loading">
+        <span>Đang tải...</span>
+        <div id="progress-container">
+            <div id="progress"></div>
+        </div>
+    </div>
+
+    <div id="ui">
+        <div id="info"></div>
+    </div>
+
+    <!-- CTA dùng chung một kiểu: vòng sáng + trái tim + chữ viết tay -->
+    <div id="start-wrap" class="love-cta" role="button" aria-label="Bắt đầu">
+        <svg viewBox="0 0 68 68" aria-hidden="true">
+            <circle class="ring-ripple" cx="34" cy="34" r="27" />
+            <circle class="ring-ripple r2" cx="34" cy="34" r="27" />
+            <circle class="ring-pulse" cx="34" cy="34" r="28" />
+            <circle class="ring-track" cx="34" cy="34" r="26" />
+            <circle class="ring-fill" id="ring-fill" cx="34" cy="34" r="26" />
+            <path class="cta-heart" d="M34 44.5c-.4 0-.8-.1-1.1-.4C27.6 39.6 23 35.9 23 31.1c0-3.2 2.4-5.6 5.4-5.6 2.1 0 3.9 1.2 4.8 3 .2.4.6.4.8 0 .9-1.8 2.7-3 4.8-3 3 0 5.4 2.4 5.4 5.6 0 4.8-4.6 8.5-9.9 13-.5.3-.9.4-1.3.4z" />
+        </svg>
+        <span class="love-cta-label" id="start-label">Giữ để bắt đầu</span>
+    </div>
+
+    <!-- Chuyển cảnh "nhắm mắt – mở mắt": cảnh nhoè dần vào màn đêm có đốm sáng bokeh, rồi lấy nét vào cảnh mới -->
+    <div id="transition-overlay" aria-hidden="true">
+        <div class="tov-veil"></div>
+        <div class="tov-bokeh">
+            <span style="left:8%;top:22%;width:54px;--o:.55;animation-delay:-1s"></span>
+            <span class="g" style="left:22%;top:64%;width:28px;--o:.7;animation-delay:-3s"></span>
+            <span style="left:34%;top:34%;width:16px;--o:.8;animation-delay:-5s"></span>
+            <span style="left:46%;top:76%;width:44px;--o:.45;animation-delay:-2s"></span>
+            <span class="g" style="left:58%;top:18%;width:22px;--o:.75;animation-delay:-4s"></span>
+            <span style="left:66%;top:52%;width:62px;--o:.4;animation-delay:-6s"></span>
+            <span style="left:78%;top:30%;width:18px;--o:.8;animation-delay:-1.5s"></span>
+            <span class="g" style="left:86%;top:70%;width:34px;--o:.6;animation-delay:-3.5s"></span>
+            <span style="left:14%;top:84%;width:20px;--o:.7;animation-delay:-4.5s"></span>
+            <span style="left:52%;top:46%;width:12px;--o:.9;animation-delay:-2.5s"></span>
+            <span class="g" style="left:40%;top:12%;width:14px;--o:.8;animation-delay:-5.5s"></span>
+            <span style="left:92%;top:10%;width:26px;--o:.55;animation-delay:-0.5s"></span>
+        </div>
+    </div>
+    <!-- Gợi ý chạm quả cầu: icon ngón tay chỉ lên (không phải trái tim → không bị hiểu nhầm là nút riêng) -->
+    <button type="button" id="sphere-click-hint" class="love-cta" aria-live="polite">
+        <svg viewBox="0 0 68 68" aria-hidden="true">
+            <circle class="ring-ripple" cx="34" cy="34" r="27" />
+            <circle class="ring-ripple r2" cx="34" cy="34" r="27" />
+            <circle class="ring-pulse" cx="34" cy="34" r="28" />
+            <circle class="ring-track" cx="34" cy="34" r="26" />
+            <g class="cta-tap">
+                <path d="M9 11.24V7.5C9 6.12 10.12 5 11.5 5S14 6.12 14 7.5v3.74c1.21-.81 2-2.18 2-3.74C16 5.01 13.99 3 11.5 3S7 5.01 7 7.5c0 1.56.79 2.93 2 3.74zm9.84 4.63-4.54-2.26c-.17-.07-.35-.11-.54-.11H13v-6c0-.83-.67-1.5-1.5-1.5S10 6.67 10 7.5v10.74l-3.43-.72c-.08-.01-.15-.03-.24-.03-.31 0-.59.13-.79.33l-.79.8 4.94 4.94c.27.27.65.44 1.06.44h6.79c.75 0 1.33-.55 1.44-1.28l.75-5.27c.01-.07.02-.14.02-.2 0-.62-.38-1.16-.91-1.38z" transform="translate(21.2 20.6) scale(1.1)" />
+            </g>
+        </svg>
+        <span class="love-cta-label">Chạm vào quả cầu nhé</span>
+    </button>
+    <button type="button" id="btn-flying-corner" class="love-cta" aria-label="Mở thư">
+        <svg viewBox="0 0 68 68" aria-hidden="true">
+            <circle class="ring-ripple" cx="34" cy="34" r="27" />
+            <circle class="ring-ripple r2" cx="34" cy="34" r="27" />
+            <circle class="ring-pulse" cx="34" cy="34" r="28" />
+            <circle class="ring-track" cx="34" cy="34" r="26" />
+            <rect class="cta-env-body" x="21" y="25.5" width="26" height="18" rx="3.2" />
+            <path class="cta-env-flap" d="M22.6 27.6 34 36.2l11.4-8.6" />
+        </svg>
+        <span class="love-cta-label">Mở thư</span>
+    </button>
+    <div id="sphere-particles-bg"></div>
+
+    <div id="cupid-letter-overlay">
+        <div class="cupid-space"></div>
+        <img id="cupid-flying-img" src="./assets/images/letters/cupidletter.png"
+            alt="Cupid" />
+        <!-- Phong thư dựng bằng CSS/SVG: dấu sáp nứt đôi → nắp lật 3D → lá thư gấp bay ra, mở từng nếp thành khung thư -->
+        <div id="love-envelope">
+            <svg class="env-defs" width="0" height="0" aria-hidden="true" focusable="false">
+                <defs>
+                    <!-- Vân giấy mịn phủ lên các vạt phong bì -->
+                    <pattern id="envGrain" width="120" height="120" patternUnits="userSpaceOnUse">
+                        <image width="120" height="120" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .55  0 0 0 0 .2  0 0 0 0 .32  0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E" />
+                    </pattern>
+                    <linearGradient id="envGold" x1="0" y1="0" x2="1" y2="1">
+                        <stop offset="0" stop-color="#f7e2a8" />
+                        <stop offset=".45" stop-color="#d6a74f" />
+                        <stop offset=".7" stop-color="#fbe9b7" />
+                        <stop offset="1" stop-color="#c8923c" />
+                    </linearGradient>
+                    <radialGradient id="envWax" cx=".36" cy=".3" r=".8">
+                        <stop offset="0" stop-color="#ff8fae" />
+                        <stop offset=".35" stop-color="#e0336d" />
+                        <stop offset=".75" stop-color="#a3124a" />
+                        <stop offset="1" stop-color="#730a33" />
+                    </radialGradient>
+                    <radialGradient id="envWaxInner" cx=".5" cy=".5" r=".5">
+                        <stop offset=".72" stop-color="#b8185a" />
+                        <stop offset="1" stop-color="#8a0d3e" />
+                    </radialGradient>
+                    <path id="envFoilHeart" d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z" />
+                    <symbol id="envSealArt" viewBox="0 0 100 100">
+                        <path d="M50 5 C55.9 4.7 62.7 4.3 68 6.6 C73.2 8.8 77.3 14.3 81.5 18.5 C85.6 22.8 90.1 27 93 32.2 C95.8 37.4 98.7 44.2 98.5 50 C98.3 55.8 94.5 62 91.6 67.2 C88.7 72.4 85 76.7 81.1 81.1 C77.2 85.5 73.2 91 68 93.4 C62.8 95.8 56.1 95.3 50 95.5 C43.9 95.7 36.9 96.7 31.6 94.3 C26.4 92 22.6 85.9 18.5 81.5 C14.5 77 10.2 72.8 7.5 67.6 C4.8 62.4 2.3 55.8 2.5 50 C2.7 44.2 6.4 38.4 8.9 33 C11.4 27.5 13.5 21.6 17.5 17.5 C21.5 13.4 27.4 10.5 32.8 8.4 C38.2 6.3 44.1 5.3 50 5 Z" fill="url(#envWax)" />
+                        <!-- Vòng dập nổi + trái tim chìm -->
+                        <circle cx="50" cy="50" r="31" fill="url(#envWaxInner)" />
+                        <circle cx="50" cy="51.2" r="31" fill="none" stroke="rgba(255,170,200,.45)" stroke-width="1.6" />
+                        <circle cx="50" cy="49" r="31" fill="none" stroke="rgba(80,0,30,.5)" stroke-width="1.6" />
+                        <circle cx="50" cy="50" r="26" fill="none" stroke="rgba(255,190,210,.35)" stroke-width=".8" stroke-dasharray="1.6 2.4" />
+                        <path d="M50 66s-15-9.2-19.3-18.6C27.6 40.6 31.9 33 39 33c4.3 0 7.3 2.4 9 5.3 1.6-2.9 4.7-5.3 9-5.3 7.1 0 11.4 7.6 8.3 14.4C61 56.8 50 66 50 66z" fill="rgba(90,0,35,.45)" transform="translate(0 1.4)" />
+                        <path d="M50 66s-15-9.2-19.3-18.6C27.6 40.6 31.9 33 39 33c4.3 0 7.3 2.4 9 5.3 1.6-2.9 4.7-5.3 9-5.3 7.1 0 11.4 7.6 8.3 14.4C61 56.8 50 66 50 66z" fill="#f0507f" />
+                        <path d="M36 40c1.5-3 4.4-4.2 7-3.4" fill="none" stroke="rgba(255,225,235,.75)" stroke-width="2" stroke-linecap="round" />
+                        <!-- Vệt bóng của sáp -->
+                        <path d="M22 26c6-8 15-12 24-12" fill="none" stroke="rgba(255,255,255,.55)" stroke-width="3.2" stroke-linecap="round" />
+                    </symbol>
+                </defs>
+            </svg>
+            <div class="env-pop">
+                <div class="env-float">
+                    <div class="env-tilt">
+                        <button type="button" class="env" aria-label="Mở thư">
+                            <span class="env-aura" aria-hidden="true"></span>
+                            <span class="env-back" aria-hidden="true"></span>
+                            <span class="env-glow" aria-hidden="true"></span>
+                            <!-- Lá thư đã gấp nằm trong phong bì: mặt ngoài có dòng chữ viết tay -->
+                            <span class="env-paper" aria-hidden="true"><span class="env-paper-title"></span></span>
+                            <svg class="env-pocket" viewBox="0 0 300 200" preserveAspectRatio="none" aria-hidden="true">
+                                <defs>
+                                    <linearGradient id="envSide" x1="0" y1="0" x2="1" y2="0">
+                                        <stop offset="0" stop-color="#f7a9c1" />
+                                        <stop offset="1" stop-color="#ffd3e1" />
+                                    </linearGradient>
+                                    <linearGradient id="envSideR" x1="1" y1="0" x2="0" y2="0">
+                                        <stop offset="0" stop-color="#ef98b3" />
+                                        <stop offset="1" stop-color="#fac4d5" />
+                                    </linearGradient>
+                                    <linearGradient id="envBottom" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0" stop-color="#ffe9f0" />
+                                        <stop offset=".55" stop-color="#ffd2e0" />
+                                        <stop offset="1" stop-color="#f6b3c8" />
+                                    </linearGradient>
+                                    <filter id="envSoft" x="-10%" y="-10%" width="120%" height="120%">
+                                        <feGaussianBlur stdDeviation="3" />
+                                    </filter>
+                                </defs>
+                                <path d="M0 6 Q0 0 6 0 L138 96 Q150 106 138 116 L6 200 Q0 200 0 194 Z" fill="url(#envSide)" />
+                                <path d="M300 6 Q300 0 294 0 L162 96 Q150 106 162 116 L294 200 Q300 200 300 194 Z" fill="url(#envSideR)" />
+                                <!-- Bóng vạt dưới đổ lên hai vạt bên -->
+                                <path d="M0 196 L134 100 Q150 90 166 100 L300 196" fill="none" stroke="rgba(150,30,70,.35)" stroke-width="7" filter="url(#envSoft)" transform="translate(0 -3)" />
+                                <path d="M0 194 L134 98 Q150 88 166 98 L300 194 Q300 200 294 200 L6 200 Q0 200 0 194 Z" fill="url(#envBottom)" />
+                                <path d="M0 0 H300 V200 H0 Z" fill="url(#envGrain)" />
+                                <!-- Tim nhũ vàng rải trên giấy -->
+                                <g fill="url(#envGold)" opacity=".9">
+                                    <use href="#envFoilHeart" transform="translate(26 176) scale(.42) rotate(-14 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(262 180) scale(.34) rotate(12 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(44 118) scale(.3) rotate(-24 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(250 110) scale(.36) rotate(18 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(96 186) scale(.26) rotate(8 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(206 188) scale(.3) rotate(-10 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(16 60) scale(.24) rotate(10 12 12)" />
+                                    <use href="#envFoilHeart" transform="translate(276 58) scale(.26) rotate(-16 12 12)" />
+                                </g>
+                                <!-- Mép gấp sáng + chỉ vàng -->
+                                <path d="M1 199 L134 98 Q150 88 166 98 L299 199" fill="none" stroke="rgba(255,255,255,.9)" stroke-width="1.4" />
+                                <path d="M3 199 L135 101 Q150 91.5 165 101 L297 199" fill="none" stroke="url(#envGold)" stroke-width="1.1" />
+                                <path d="M18 199 L137 110 Q150 101 163 110 L282 199" fill="none" stroke="rgba(214,167,79,.55)" stroke-width=".7" stroke-dasharray="2 3" />
+                                <!-- Độ dày giấy ở mép dưới + viền vàng quanh phong bì -->
+                                <path d="M4 198.6 H296" stroke="rgba(150,30,70,.25)" stroke-width="1.4" />
+                                <rect x="1.2" y="1.2" width="297.6" height="197.6" rx="5.5" fill="none" stroke="url(#envGold)" stroke-width="1.1" opacity=".85" />
+                            </svg>
+                            <span class="env-to" aria-hidden="true"></span>
+                            <span class="env-flap" aria-hidden="true">
+                                <svg viewBox="0 0 300 124" preserveAspectRatio="none">
+                                    <defs>
+                                        <linearGradient id="envFlap" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0" stop-color="#ffe3ec" />
+                                            <stop offset=".6" stop-color="#fbc2d4" />
+                                            <stop offset="1" stop-color="#f3a3bd" />
+                                        </linearGradient>
+                                        <linearGradient id="envLace" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0" stop-color="#ffffff" />
+                                            <stop offset="1" stop-color="#fff0f4" />
+                                        </linearGradient>
+                                        <linearGradient id="envFlapIn" x1="0" y1="0" x2="0" y2="1">
+                                            <stop offset="0" stop-color="#d94f82" />
+                                            <stop offset="1" stop-color="#a82a5c" />
+                                        </linearGradient>
+                                        <pattern id="envHearts" width="22" height="22" patternUnits="userSpaceOnUse">
+                                            <path d="M11 16s-5-3-6.3-6c-1-2.3.4-4.6 2.6-4.6 1.4 0 2.4.8 3 1.8.5-1 1.6-1.8 3-1.8 2.3 0 3.6 2.3 2.6 4.6C16 13 11 16 11 16z" fill="rgba(255,210,226,.28)" />
+                                        </pattern>
+                                    </defs>
+                                    <g class="env-flap-out">
+                                        <!-- Viền ren trắng lượn sóng có lỗ -->
+                                        <path d="M0 0 L300 0 L300 2 A8.5 8.5 0 0 1 287.5 11.6 A8.5 8.5 0 0 1 275 21.2 A8.5 8.5 0 0 1 262.5 30.8 A8.5 8.5 0 0 1 250 40.3 A8.5 8.5 0 0 1 237.5 49.9 A8.5 8.5 0 0 1 225 59.5 A8.5 8.5 0 0 1 212.5 69.1 A8.5 8.5 0 0 1 200 78.7 A8.5 8.5 0 0 1 187.5 88.2 A8.5 8.5 0 0 1 175 97.8 A8.5 8.5 0 0 1 162.5 107.4 A8.5 8.5 0 0 1 150 117 A8.5 8.5 0 0 1 137.5 107.4 A8.5 8.5 0 0 1 125 97.8 A8.5 8.5 0 0 1 112.5 88.2 A8.5 8.5 0 0 1 100 78.7 A8.5 8.5 0 0 1 87.5 69.1 A8.5 8.5 0 0 1 75 59.5 A8.5 8.5 0 0 1 62.5 49.9 A8.5 8.5 0 0 1 50 40.3 A8.5 8.5 0 0 1 37.5 30.8 A8.5 8.5 0 0 1 25 21.2 A8.5 8.5 0 0 1 12.5 11.6 A8.5 8.5 0 0 1 0 2 Z" fill="url(#envLace)" />
+                                        <g fill="#f4b3c7"><circle cx="5.5" cy="7.7" r="1.9" /><circle cx="18" cy="17.3" r="1.9" /><circle cx="30.5" cy="26.9" r="1.9" /><circle cx="43" cy="36.5" r="1.9" /><circle cx="55.5" cy="46.1" r="1.9" /><circle cx="68" cy="55.7" r="1.9" /><circle cx="80.5" cy="65.2" r="1.9" /><circle cx="93" cy="74.8" r="1.9" /><circle cx="105.5" cy="84.4" r="1.9" /><circle cx="118" cy="94" r="1.9" /><circle cx="130.5" cy="103.6" r="1.9" /><circle cx="294.5" cy="7.7" r="1.9" /><circle cx="282" cy="17.3" r="1.9" /><circle cx="269.5" cy="26.9" r="1.9" /><circle cx="257" cy="36.5" r="1.9" /><circle cx="244.5" cy="46.1" r="1.9" /><circle cx="232" cy="55.7" r="1.9" /><circle cx="219.5" cy="65.2" r="1.9" /><circle cx="207" cy="74.8" r="1.9" /><circle cx="194.5" cy="84.4" r="1.9" /><circle cx="182" cy="94" r="1.9" /><circle cx="169.5" cy="103.6" r="1.9" /></g>
+                                        <g fill="#f7c3d3"><circle cx="16.5" cy="6.4" r="0.9" /><circle cx="29" cy="16" r="0.9" /><circle cx="41.5" cy="25.6" r="0.9" /><circle cx="54" cy="35.2" r="0.9" /><circle cx="66.5" cy="44.8" r="0.9" /><circle cx="79" cy="54.3" r="0.9" /><circle cx="91.5" cy="63.9" r="0.9" /><circle cx="104" cy="73.5" r="0.9" /><circle cx="116.5" cy="83.1" r="0.9" /><circle cx="129" cy="92.7" r="0.9" /><circle cx="283.5" cy="6.4" r="0.9" /><circle cx="271" cy="16" r="0.9" /><circle cx="258.5" cy="25.6" r="0.9" /><circle cx="246" cy="35.2" r="0.9" /><circle cx="233.5" cy="44.8" r="0.9" /><circle cx="221" cy="54.3" r="0.9" /><circle cx="208.5" cy="63.9" r="0.9" /><circle cx="196" cy="73.5" r="0.9" /><circle cx="183.5" cy="83.1" r="0.9" /><circle cx="171" cy="92.7" r="0.9" /></g>
+                                        <path d="M0 0 L300 0 L300 2 A8.5 8.5 0 0 1 287.5 11.6 A8.5 8.5 0 0 1 275 21.2 A8.5 8.5 0 0 1 262.5 30.8 A8.5 8.5 0 0 1 250 40.3 A8.5 8.5 0 0 1 237.5 49.9 A8.5 8.5 0 0 1 225 59.5 A8.5 8.5 0 0 1 212.5 69.1 A8.5 8.5 0 0 1 200 78.7 A8.5 8.5 0 0 1 187.5 88.2 A8.5 8.5 0 0 1 175 97.8 A8.5 8.5 0 0 1 162.5 107.4 A8.5 8.5 0 0 1 150 117 A8.5 8.5 0 0 1 137.5 107.4 A8.5 8.5 0 0 1 125 97.8 A8.5 8.5 0 0 1 112.5 88.2 A8.5 8.5 0 0 1 100 78.7 A8.5 8.5 0 0 1 87.5 69.1 A8.5 8.5 0 0 1 75 59.5 A8.5 8.5 0 0 1 62.5 49.9 A8.5 8.5 0 0 1 50 40.3 A8.5 8.5 0 0 1 37.5 30.8 A8.5 8.5 0 0 1 25 21.2 A8.5 8.5 0 0 1 12.5 11.6 A8.5 8.5 0 0 1 0 2 Z" fill="none" stroke="rgba(214,130,160,.45)" stroke-width=".8" />
+                                        <!-- Thân nắp -->
+                                        <path d="M15.4 0 L284.6 0 L150 103.2 Z" fill="url(#envFlap)" />
+                                        <path d="M15.4 0 L284.6 0 L150 103.2 Z" fill="url(#envGrain)" />
+                                        <path d="M15.4 0 L150 103.2 L284.6 0" fill="none" stroke="url(#envGold)" stroke-width="1.6" />
+                                        <path d="M30 0 L150 91.8 L270 0" fill="none" stroke="rgba(214,167,79,.5)" stroke-width=".7" stroke-dasharray="2 3" />
+                                        <g fill="url(#envGold)" opacity=".9">
+                                            <use href="#envFoilHeart" transform="translate(70 12) scale(.3) rotate(-12 12 12)" />
+                                            <use href="#envFoilHeart" transform="translate(222 14) scale(.26) rotate(14 12 12)" />
+                                            <use href="#envFoilHeart" transform="translate(142 30) scale(.34)" />
+                                        </g>
+                                    </g>
+                                    <g class="env-flap-in">
+                                        <path d="M0 0 L300 0 L300 2 A8.5 8.5 0 0 1 287.5 11.6 A8.5 8.5 0 0 1 275 21.2 A8.5 8.5 0 0 1 262.5 30.8 A8.5 8.5 0 0 1 250 40.3 A8.5 8.5 0 0 1 237.5 49.9 A8.5 8.5 0 0 1 225 59.5 A8.5 8.5 0 0 1 212.5 69.1 A8.5 8.5 0 0 1 200 78.7 A8.5 8.5 0 0 1 187.5 88.2 A8.5 8.5 0 0 1 175 97.8 A8.5 8.5 0 0 1 162.5 107.4 A8.5 8.5 0 0 1 150 117 A8.5 8.5 0 0 1 137.5 107.4 A8.5 8.5 0 0 1 125 97.8 A8.5 8.5 0 0 1 112.5 88.2 A8.5 8.5 0 0 1 100 78.7 A8.5 8.5 0 0 1 87.5 69.1 A8.5 8.5 0 0 1 75 59.5 A8.5 8.5 0 0 1 62.5 49.9 A8.5 8.5 0 0 1 50 40.3 A8.5 8.5 0 0 1 37.5 30.8 A8.5 8.5 0 0 1 25 21.2 A8.5 8.5 0 0 1 12.5 11.6 A8.5 8.5 0 0 1 0 2 Z" fill="url(#envFlapIn)" />
+                                        <path d="M0 0 L300 0 L300 2 A8.5 8.5 0 0 1 287.5 11.6 A8.5 8.5 0 0 1 275 21.2 A8.5 8.5 0 0 1 262.5 30.8 A8.5 8.5 0 0 1 250 40.3 A8.5 8.5 0 0 1 237.5 49.9 A8.5 8.5 0 0 1 225 59.5 A8.5 8.5 0 0 1 212.5 69.1 A8.5 8.5 0 0 1 200 78.7 A8.5 8.5 0 0 1 187.5 88.2 A8.5 8.5 0 0 1 175 97.8 A8.5 8.5 0 0 1 162.5 107.4 A8.5 8.5 0 0 1 150 117 A8.5 8.5 0 0 1 137.5 107.4 A8.5 8.5 0 0 1 125 97.8 A8.5 8.5 0 0 1 112.5 88.2 A8.5 8.5 0 0 1 100 78.7 A8.5 8.5 0 0 1 87.5 69.1 A8.5 8.5 0 0 1 75 59.5 A8.5 8.5 0 0 1 62.5 49.9 A8.5 8.5 0 0 1 50 40.3 A8.5 8.5 0 0 1 37.5 30.8 A8.5 8.5 0 0 1 25 21.2 A8.5 8.5 0 0 1 12.5 11.6 A8.5 8.5 0 0 1 0 2 Z" fill="url(#envHearts)" />
+                                        <path d="M15.4 0 L150 103.2 L284.6 0" fill="none" stroke="url(#envGold)" stroke-width="1.4" opacity=".8" />
+                                    </g>
+                                </svg>
+                            </span>
+                            <!-- Vệt sáng lướt qua như giấy ánh ngọc trai -->
+                            <span class="env-sheen" aria-hidden="true"></span>
+                            <span class="env-seal" aria-hidden="true">
+                                <!-- Cành hoa khô cài dưới dấu sáp -->
+                                <svg class="env-sprig" viewBox="0 0 160 80">
+                                    <path d="M6 66 Q52 50 80 40 T156 10" fill="none" stroke="#8c9b7c" stroke-width="1.6" stroke-linecap="round" />
+                                    <g fill="#9fb592">
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(14 62) rotate(-40)" />
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(20 60) rotate(40)" />
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(30 56) rotate(-50)" />
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(37 54) rotate(30)" fill="#8aa47f" />
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(47 50) rotate(-45)" fill="#8aa47f" />
+                                        <path d="M0 0 Q7 -6 16 0 Q7 6 0 0Z" transform="translate(53 48) rotate(35)" />
+                                    </g>
+                                    <g stroke="#a5ab8c" stroke-width=".9" fill="none" stroke-linecap="round">
+                                        <path d="M112 26 L118 14 M118 22 L130 16 M126 20 L134 26 M134 17 L140 8 M140 14 L150 18 M104 30 L108 40" />
+                                    </g>
+                                    <g fill="#fff7f0" stroke="#efd3c6" stroke-width=".6">
+                                        <circle cx="118" cy="13" r="2.8" /><circle cx="121" cy="10" r="2.2" /><circle cx="130" cy="15" r="2.6" />
+                                        <circle cx="134" cy="27" r="2.4" /><circle cx="137" cy="24" r="1.9" /><circle cx="140" cy="7" r="2.6" />
+                                        <circle cx="143" cy="4.5" r="1.8" /><circle cx="150" cy="18" r="2.5" /><circle cx="153" cy="15" r="1.8" />
+                                        <circle cx="108" cy="41" r="2.4" /><circle cx="111" cy="43" r="1.7" />
+                                    </g>
+                                    <g fill="#f3a3bd">
+                                        <circle cx="124" cy="12" r="1.5" /><circle cx="146" cy="10" r="1.4" /><circle cx="131" cy="25" r="1.3" />
+                                    </g>
+                                </svg>
+                                <span class="env-seal-whole"><svg viewBox="0 0 100 100"><use href="#envSealArt" /></svg></span>
+                                <span class="env-seal-half l"><svg viewBox="0 0 100 100"><use href="#envSealArt" /></svg></span>
+                                <span class="env-seal-half r"><svg viewBox="0 0 100 100"><use href="#envSealArt" /></svg></span>
+                            </span>
+                            <span class="env-twinkle t1" aria-hidden="true">✦</span>
+                            <span class="env-twinkle t2" aria-hidden="true">✦</span>
+                            <span class="env-twinkle t3" aria-hidden="true">✧</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button type="button" id="letter-envelope-hint" class="love-cta" aria-label="Mở thư">
+            <svg viewBox="0 0 68 68" aria-hidden="true">
+                <circle class="ring-ripple" cx="34" cy="34" r="27" />
+                <circle class="ring-ripple r2" cx="34" cy="34" r="27" />
+                <circle class="ring-pulse" cx="34" cy="34" r="28" />
+                <circle class="ring-track" cx="34" cy="34" r="26" />
+                <path class="cta-heart" d="M34 44.5c-.4 0-.8-.1-1.1-.4C27.6 39.6 23 35.9 23 31.1c0-3.2 2.4-5.6 5.4-5.6 2.1 0 3.9 1.2 4.8 3 .2.4.6.4.8 0 .9-1.8 2.7-3 4.8-3 3 0 5.4 2.4 5.4 5.6 0 4.8-4.6 8.5-9.9 13-.5.3-.9.4-1.3.4z" />
+            </svg>
+            <span class="love-cta-label">Chạm để mở thư</span>
+        </button>
+        <div id="cupid-letter-frame">
+            <div class="letter-butterfly-left"><img
+                    src="./assets/images/buomtrai.png" alt="" /></div>
+            <div class="letter-butterfly-right"><img
+                    src="./assets/images/buomphai.png" alt="" /></div>
+            <div class="letter-bottom-bg"></div>
+            <!-- Dấu sáp trái tim niêm phong ở mép trên -->
+            <div class="letter-seal" aria-hidden="true">
+                <svg viewBox="0 0 24 24"><path d="M12 20.6s-7.4-4.5-9.5-9.1C1 8.1 3.1 4.4 6.6 4.4c2.1 0 3.6 1.2 4.4 2.6.8-1.4 2.3-2.6 4.4-2.6 3.5 0 5.6 3.7 4.1 7.1-2.1 4.6-9.5 9.1-9.5 9.1z"/></svg>
+            </div>
+            <!-- Tiêu đề + nội dung + chữ ký + ảnh cuộn chung: màn thấp (điện thoại xoay ngang) vẫn đọc trọn thư -->
+            <div class="letter-scroll">
+                <h2 class="letter-title" id="letterTitle" style="display:none"></h2>
+                <div class="letter-divider" id="letterDivider" aria-hidden="true" style="display:none"><span>♥</span></div>
+                <div class="letter-content"></div>
+                <div class="letter-signature" id="letterSignature" style="display:none"></div>
+                <div class="letter-image-wrap" id="letterImageWrap" style="display:none">
+                    <!-- Ảnh được dán lên thư bằng 2 miếng băng dính giấy ở góc chéo -->
+                    <span class="lp-tape tl" aria-hidden="true"></span>
+                    <img class="letter-inline-image" id="letterInlineImage" src="" alt="">
+                    <span class="lp-tape br" aria-hidden="true"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <canvas id="webglCanvas"></canvas>
+
+    
+    <!-- ================================================================
+         APP CONFIG — Chỉnh sửa các giá trị tại đây
+         ================================================================ -->
+    <script src="./config.js"></script>
+    <script defer src="./dist/js/index.js"></script>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://cdn.jsdelivr.net/npm/three@0.163.0/build/three.module.js",
+          "three/addons/": "https://cdn.jsdelivr.net/npm/three@0.163.0/examples/jsm/"
+        }
+      }
+    </script>
+    <script defer src="./dist/js/threejs.js"></script>
+</body>
+
+</html>
